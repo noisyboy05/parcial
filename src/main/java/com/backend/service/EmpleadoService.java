@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,7 +17,8 @@ import com.backend.repository.EmpleadoRepository;
 
 @Service
 public class EmpleadoService implements EmpleadoRepository {
-	
+
+	@Autowired
 	EmpleadoRepository empleadoRepository;
 
 	@Override
@@ -117,8 +119,7 @@ public class EmpleadoService implements EmpleadoRepository {
 
 	@Override
 	public <S extends Empleado> S save(S entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return empleadoRepository.save(entity);
 	}
 
 	@Override

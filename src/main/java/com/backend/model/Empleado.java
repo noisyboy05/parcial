@@ -49,6 +49,11 @@ public class Empleado {
 		this.correo_corp = correo_corp;
 		this.horario = horario;
 	}
+
+	public long getId() {
+		return id;
+	}
+
 	public long getId_Empresa() {
 		return id;
 	}
